@@ -1,0 +1,65 @@
+:root {
+  --bg: #1b1f3a;
+  --fg: #f4f1de;
+  --muted: #a9a7c4;
+  --accent: #f2cc60;
+  --glow: #2e3466;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 70% 10%, var(--glow), var(--bg) 60%);
+  color: var(--fg);
+  font: 18px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+#countdown { text-align: center; padding-top: 10vh; }
+
+h1 { font-size: 1.8rem; margin: 0 0 1rem; }
+h2 { font-size: 1.2rem; margin-top: 2rem; color: var(--accent); }
+
+.count { font-size: 2.4rem; font-weight: 700; margin: 0.5rem 0; }
+.count strong { font-size: 5rem; display: block; line-height: 1.1; color: var(--accent); }
+.moons { font-size: 1.6rem; letter-spacing: 0.15em; word-break: break-all; }
+.date { color: var(--muted); }
+
+a { color: var(--accent); }
+code { background: #ffffff14; padding: 0.1em 0.35em; border-radius: 0.3em; }
+
+.events { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 0.5rem; }
+.events a { display: block; padding: 0.6rem 0.8rem; border-radius: 0.6rem; background: #ffffff10; text-decoration: none; color: var(--fg); }
+.events a:hover { background: #ffffff22; }
+.events small { display: block; color: var(--muted); }
+
+form { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+input, button { font: inherit; padding: 0.4rem 0.8rem; border-radius: 0.5rem; border: 1px solid var(--muted); background: #ffffff10; color: var(--fg); }
+button { background: var(--accent); color: var(--bg); border-color: var(--accent); cursor: pointer; }
+
+/* Per-event themes: <body data-dodo="<slug>"> is set by app.js. */
+[data-dodo="noel"]            { --bg: #0f2a1d; --glow: #7a1f1f; --accent: #f2cc60; }
+[data-dodo="nouvel-an"]       { --bg: #0b0b1e; --glow: #3a2a6b; --accent: #ffd56b; }
+[data-dodo="week-end"]        { --bg: #12324a; --glow: #2b7a8c; --accent: #ffb347; }
+[data-dodo="mercredi"]        { --bg: #2a1f4a; --glow: #7a3fa0; --accent: #7ee0c3; }
+[data-dodo="epiphanie"]       { --bg: #3a2a10; --glow: #a0772a; --accent: #ffe08a; }
+[data-dodo="chandeleur"]      { --bg: #3b2414; --glow: #8a5a2b; --accent: #ffd28a; }
+[data-dodo="saint-valentin"]  { --bg: #3a0f24; --glow: #a0245a; --accent: #ff9ec4; }
+[data-dodo="poisson-d-avril"] { --bg: #0d2d4a; --glow: #1f6fa0; --accent: #ffa45c; }
+[data-dodo="paques"]          { --bg: #1f3a2a; --glow: #6a9a4a; --accent: #ffd1e8; }
+[data-dodo="fete-des-meres"]  { --bg: #3a1a33; --glow: #9a4a8a; --accent: #ffc2d9; }
+[data-dodo="fete-des-peres"]  { --bg: #14243a; --glow: #3a5a8a; --accent: #9fd3ff; }
+[data-dodo="printemps"]       { --bg: #1d3a24; --glow: #5aa05a; --accent: #ffb3d1; }
+[data-dodo="ete"]             { --bg: #0d3a5a; --glow: #2a8ac0; --accent: #ffd84a; }
+[data-dodo="14-juillet"]      { --bg: #0a1a4a; --glow: #8a1a2a; --accent: #ffffff; }
+[data-dodo="automne"]         { --bg: #3a1f0d; --glow: #a0521f; --accent: #ffb347; }
+[data-dodo="halloween"]       { --bg: #140a1e; --glow: #4a1a5a; --accent: #ff8c1a; }
+[data-dodo="hiver"]           { --bg: #14283a; --glow: #5a8ab0; --accent: #e6f4ff; }

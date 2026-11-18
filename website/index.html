@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Combien de dodo ?</title>
+  <meta name="description" content="Combien de dodos avant Noël, le week-end, les vacances… ou n'importe quelle date.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <section id="countdown" hidden>
+      <h1 id="title"></h1>
+      <p id="count" class="count"></p>
+      <p id="moons" class="moons" aria-hidden="true"></p>
+      <p id="date" class="date"></p>
+      <p><a href="/">← Tous les dodos</a></p>
+    </section>
+
+    <section id="home" hidden>
+      <h1>Combien de dodo ? 🌙</h1>
+      <p>Compte le nombre de nuits avant un événement.</p>
+
+      <h2>Les dodos</h2>
+      <ul id="events" class="events"></ul>
+
+      <h2>Une date à toi</h2>
+      <p>Mets la date dans l'adresse, au format <code>/AAAA-MM-JJ</code>&nbsp;:</p>
+      <p><a href="/2027-05-12"><code>/2027-05-12</code></a></p>
+      <p>Une année marche aussi&nbsp;: <a href="/2030"><code>/2030</code></a> = avant le 1<sup>er</sup> janvier 2030.</p>
+      <form id="form">
+        <input type="date" name="d" required aria-label="Date">
+        <button type="submit">Compter</button>
+      </form>
+    </section>
+
+    <noscript>Il faut activer JavaScript pour compter les dodos.</noscript>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
